@@ -1,0 +1,23 @@
+
+
+body{
+	background-color: rgb(80, 80, 80);
+}
+
+#topbar, #leftbar, #rightbar, #centrebar{
+	background-color: rgb(144, 144, 144);
+	border-radius: 5px;
+	box-shadow: 10px 10px 10px;
+	
+}
+
+#topbar{
+	width: 70;
+	height: 80;
+	margin: 20px;
+}
+#leftbar{
+	width: 70;
+	height: 180;
+	/* background-color: rgb(1, 1, 144); */
+}
