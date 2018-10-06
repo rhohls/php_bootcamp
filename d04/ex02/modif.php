@@ -4,35 +4,39 @@ function exit_()
 	echo "ERROR\n";
 	die();
 }
+
 session_start();
 if ($_POST["submit"] == "OK")
 {
-	if ($_POST["login"] !== "" && $_POST["passwd"] !== "")
+	if ($_POST["login"] !== "" && $_POST["olpw"] !== "" && $_POST["newpw"] !== "")
 	{
-		$login = $_POST["login"];		
-		@mkdir("../private");
-		
+		$login = $_POST["login"];	
 		$i = 0;
 		if (file_exists("../private/passwd"))
 		{
+			
 			$data = unserialize(file_get_contents("../private/passwd"));
 			foreach ($data as $acc)
 			{
 				if ($acc["login"] == $login)
-					exit_();
+					break ;
 				$i++;
 			}
 		}
 		else
-			file_put_contents('../private/passwd', null);
+			exit_();
 		
-		$hashedpwd = hash('Whirlpool', $_POST["passwd"]);
-		$new_acc["login"] = $login;
-		$new_acc["passwd"] = $hashedpwd;
+		if ($acc["login"] !== $login)
+			exit_();	
+		$oldhashedpwd = hash('Whirlpool', $_POST["oldpw"]);
+		if ($oldhashedpwd != $acc["passwd"])
+			exit_();
+
+		$newhashedpwd = hash('Whirlpool', $_POST["newpw"]);
+		$acc["passwd"] = $newhashedpwd;
 		
-		$data[$i + 1] = $new_acc;
 		file_put_contents("../private/passwd", serialize($data));
-		echo "OK\n";
+		echo "OK\n";		
 	}
 	else
 		exit_();

@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Ye Olde Shoppe</title>
+</head>
+<body>
+	<div class="main_wrapper">
+		<!-- This is ther header section -->
+		<div class="header_wrapper">
+			<img id="logo" src="./images/logo.png" />
+				<!-- potential search bar -->
+			<span id="name">FUN - Furniture</span>
+			<!-- other banner stuff -->
+		</div>
+		
+		<!-- This is hte menubar -->		
+		<div class="menu_bar">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Sign Up</a></li>
+				<li><a href="#">My Account</a></li>
+				<li><a href="#">Basket</a></li>
+				<li><a href="#">Contact us</a></li>
+				
+			</ul>
+		</div>
+		<div class="content_wrapper">
+			<!-- side bar -->
+			<div id="side_bar">
+				<!-- hyperlink categories to a cat page? -->
+				<div id="categories_title">Room Type</div>
+				<ul id="cat_list">
+					<!-- <?php getRoomType() ?> -->
+					<li><a href="#">Bedroom</a></li>
+					<li><a href="#">Lounge</a></li>
+					<li><a href="#">Kitchen</a></li>
+					<li><a href="#">Dinning Room</a></li>
+				</ul>
+				<div class="padding"></div>
+				<div id="categories_title">Furniture Type</div>
+				<ul id="cat_list">
+					<li><a href="#">Chair</a></li>
+					<li><a href="#">Bed</a></li>
+					<li><a href="#">?other?</a></li>			
+				</ul>
+			</div>
+			
+			
+			<!-- Main content -->
+			
+			<!-- <?php fillPage() ?> -->
+			<div id="products">
+				<div id="single_product">
+					<h4>Chair</h4>
+					<a href='#'><img src='./images/chair.jpeg' width='180' height='180' /></a>
+					<p>Price: R100</p>
+				</div>
+				<div id="single_product">
+					<h4>Table</h4>
+					<a href='#'><img src='./images/table.jpeg' width='180' height='180' /></a>
+					<p>Price: R1000</p>			
+				</div>
+			</div>
+			<!-- End main contents -->
+			
+		</div>
+		<div id="footer">
+			this is the footer
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+*{
+	box-sizing: border-box;
+}
+body {
+	background-color:white;
+	font-family: 'Courier New', Courier, monospace;
+}
+.padding{
+	padding: 3em;
+}
+#logo{
+	float: left;
+	height: 150px;
+}
+
+/* Main and header (top) */
+.main_wrapper{
+	width: 1000px;
+	height: auto;
+	margin: auto;
+}
+
+.header_wrapper{
+	width: 1000px;
+	height: 150px;
+	margin: auto;
+	background: lightgray;
+}
+
+#name{
+	font-weight: bold;
+	color: brown;
+	font-size: 40px;
+	margin-left: 250px;
+	
+}
+
+/* Menu bar section */
+.menu_bar{
+	width: 1000px;
+	height: 50px;
+}
+
+.menu_bar li{
+	display: inline;
+	list-style: none;
+	padding: 10px;
+	margin: 10px;
+}
+
+.menu_bar a{
+	text-decoration: none;
+	padding: 8px;
+	margin: 5px;
+	font-size: 20px;
+	color:gray;
+	
+}
+
+.menu_bar a:hover{
+	color: darkgray;
+	font-weight: bolder;
+		
+}
+
+/* Central page content */
+.content_wrapper{
+	width: 1000px;
+	float: right;
+	background: rgb(139,69,19);
+}
+
+#single_product{
+	/* display: inline; */
+	/* float: left; */
+	margin: 30px;
+}
+#single_product img{
+	border: 1px solid black; 
+}
+
+#products{
+	width: 70%;
+	height: 800px;
+	float: right; 
+	background: rgb(222,184,135);
+}
+/* sidebar */
+#side_bar{
+	width: 30%;
+	height: 800px;
+	background: rgb(139,69,19);
+	float: left;
+}
+
+#categories_title{
+	font-size: 40px;
+	padding-left: 10px;
+	width: 100%;
+	background: rgb(182, 101, 43);
+
+}
+
+#cat_list li{
+	list-style: none;
+	/* padding: 10px; */
+	margin: 1px;
+	line-height: 40px;
+	
+}
+
+#cat_list a{
+	text-decoration: none;
+	padding: 8px;
+	margin: 5px;
+	font-size: 20px;
+	color:gray;
+}
+#cat_list a:hover{
+	color: darkgray;
+	font-weight: bolder;		
+}
+
+#footer{
+	width: 1000px;
+	height: 50px;
+	background: brown;
+	
+}
