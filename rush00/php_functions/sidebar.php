@@ -7,9 +7,17 @@
 // dont technically need it
 function getRoomType()
 {
+
+	$var = get_database_all_items();
 	
-//for each cat echo:
-	echo "<li><a href='$catpagelink'>$catpagetittle</a></li>\n";
+	foreach($var as $item):
+	{ 
+		$link = $item['url'];
+		$title = $item['title'];
+		
+		
+		
+		echo "<li><a href='$link'>$title</a></li>\n";
 	
 }
 
