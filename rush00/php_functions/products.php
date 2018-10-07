@@ -1,16 +1,19 @@
 <?php
 // pass category to function
+#require('database.php');
 function getProductsHome()
 {
-	//hompage
-
-	foreach($var as $item)
+	if (!file_exists("my_db.fundb"))
+		return ;
+	$db = file_get_contents("my_db.fundb");
+	$db = json_decode($db);
+	foreach($db as $item)
 	{ 
-		$img_loc = $item[];
-		$id = $item[];
-		$partial_descrip = substr($item[], 0, 10);
-		$item_name = $item[];
-		$price = $item[];
+		$img_loc = $item['img'];
+		$id = $item['id'];
+		$partial_descrip = substr($item['category'], 0, 10);
+		$item_name = $item['name'];
+		$price = $item['price'];
 		echo "
 		<div id='single_product'>
 			<a href='index.php?page=product&id=$id'><img src='$img_loc' width='180' height='180' /></a>
