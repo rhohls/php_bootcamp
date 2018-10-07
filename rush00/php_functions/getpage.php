@@ -56,23 +56,10 @@ function pageContact(){
 	echo "<h2>Please don't</h2>";
 }
 
-function pageHome(){
-	
-	echo "<h2>All Products</h2>
-	<div id='single_product'>
-		<a href='#'><img src='./images/chair.jpeg' width='180' height='180' /></a>
-		<div id='product_text'>
-			<h4>Chair</h4>
-			<a> partial item description</a>
-			<p>Price: R100</p>
-			<button>Add to Cart</button>
-		</div>
-	</div>";
-}
 function pageSign(){
 	echo "<h2>Login</h2>
 	<div id='login'>
-		<form action='login.php' method='post'>
+		<form action='index.php?' method='post'>
 			<table id='login_table'>
 				
 				<tr>
@@ -98,7 +85,7 @@ function pageSign(){
 	
 	<h2>Register</h2>
 	<div id='login'>
-		<form action='register.php' method='post'>
+		<form action='register.php' method='POST'>
 			<table id='login_table'>
 				
 				<tr><td>Username:</td>
@@ -126,11 +113,35 @@ function pageSign(){
 				
 				
 				<tr align='right'>
-					<td><input type='submit' name='register_submit' value='Register'/></td>
+					<td><input type='submit' name='register_submit' value='register'/></td>
 				</tr>
 			</table>
 		</form>
 	</div>";
+}
+
+function pageHome(){
+	echo "<h2>All Products</h2>\n
+	<div id='single_product'>
+		<a href='#'><img src='./images/chair.jpeg' width='180' height='180' /></a>
+		<div id='product_text'>
+			<h4>Chair</h4>
+			<a> partial item description</a>
+			<p>Price: R100</p>
+			<a href='index.php?addtocart=1'><button>Add to Cart</button></a>
+		</div>
+	</div>	";
+}
+
+function pageOneProduct(){
+	echo "<h2>Item</h2>\n";
+	
+}
+// <a href='additem.php'><button>Change Quantity</button></a>
+function pageBasket(){
+	echo "<h2>Basket</h2>\n";
+
+	
 }
 
 
@@ -170,7 +181,7 @@ function getPage(){
 				break;
 				
 			case ('product'):
-				getCategory();
+				pageOneProduct();
 				break;
 				
 		}

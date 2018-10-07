@@ -27,17 +27,5 @@ function getSidebarCat2()
 	}
 }
 
-function getBasketInfo()
-{
-	$basket = $_SESSION['basket'];
-	// $num_items = count($basket);
-	// $cost = calculate_cost($basket);
-	
-	$num_items = 0;
-	$cost = 0;
-	echo"<span>Total items: $num_items</span>
-	<br>
-	<span>Net cost: R$cost</span>";
-}
 
 ?>

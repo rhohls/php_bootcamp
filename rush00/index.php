@@ -1,19 +1,16 @@
 <html>
 	<?php
-	
+	session_start();
 	
 	require_once './php_functions/sidebar.php';
 	require_once './php_functions/username.php';
 	require_once './php_functions/getpage.php';
+	require_once './php_functions/logout.php';
+	require_once './php_functions/addtocart.php';
 	
-	if ($_GET["logout"] == "OK")
-	{
-		session_start();
-		session_destroy();
-		header('Location: index.php');
-		exit;	
-	}
+	// require_once './php_functions/register.php';
 	
+
 	?>
 <head>
 	<meta charset="UTF-8">
